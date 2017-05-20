@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (4.4.0)
+  - IGListKit (2.1.0):
+    - IGListKit/Default (= 2.1.0)
+  - IGListKit/Default (2.1.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (2.1.0)
+  - Moya (8.0.3):
+    - Moya/Core (= 8.0.3)
+  - Moya-SwiftyJSONMapper/Core (2.2.0):
+    - Moya (~> 8.0.0)
+    - SwiftyJSON
+  - Moya-SwiftyJSONMapper/RxSwift (2.2.0):
+    - Moya-SwiftyJSONMapper/Core
+    - Moya/RxSwift
+  - Moya/Core (8.0.3):
+    - Alamofire (~> 4.1)
+    - Result (~> 3.0)
+  - Moya/RxSwift (8.0.3):
+    - Moya/Core
+    - RxSwift (~> 3.0)
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.9):
+    - PINOperation
+  - PINRemoteImage/iOS (3.0.0-beta.9):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.9):
+    - PINCache (= 3.0.1-beta.4)
+    - PINRemoteImage/Core
+  - Result (3.2.1)
+  - RxSwift (3.4.1)
+  - SwiftyJSON (3.1.4)
+  - Texture/Core (2.3.1)
+  - Texture/IGListKit (2.3.1):
+    - IGListKit (= 2.1.0)
+    - Texture/Core
+  - Texture/PINRemoteImage (2.3.1):
+    - PINRemoteImage/iOS (= 3.0.0-beta.9)
+    - PINRemoteImage/PINCache
+    - Texture/Core
+
+DEPENDENCIES:
+  - Moya-SwiftyJSONMapper/RxSwift
+  - Moya/RxSwift
+  - Texture/IGListKit
+  - Texture/PINRemoteImage
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  IGListKit: b826c68ef7a4ae1626c09d4d3e1ea7a169e6c36e
+  Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
+  Moya-SwiftyJSONMapper: 03c9d3e562c9025c8c00fa3ec97ae1da61a2be37
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: e4e02e15a6f96cedbcef2abf1c9c1228dc9897d7
+  Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Texture: 839c52ecab07007fade582a01f77224b076ad960
+
+PODFILE CHECKSUM: 70b8904b100cbaedcfc0c641d4ad58053b16186b
+
+COCOAPODS: 1.2.0
