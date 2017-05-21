@@ -42,7 +42,7 @@ extension GitHub: TargetType {
     var parameters: [String: Any]? {
         switch self {
         case let .search(name, page):
-            return ["q": name.urlEscaped, "page": page]
+            return ["in": "login","type": "user","q": name, "page": page]
         case .repos: return nil
         }
     }

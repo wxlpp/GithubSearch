@@ -17,7 +17,8 @@ class SearchListViewController: ASViewController<ASCollectionNode> {
         IGListAdapter(updater: IGListAdapterUpdater(), viewController: self, workingRangeSize: 0)
     }()
     let searchBar = UISearchBar()
-    var list = [IGListDiffable]()
+    var list = [UserCellModel]()
+    var lastSearStr = ""
     var totalCount = 0
     let disposeBag = DisposeBag()
     init() {
@@ -52,7 +53,19 @@ class SearchListViewController: ASViewController<ASCollectionNode> {
         searchBar.placeholder = "搜索"
         navigationItem.titleView = searchBar
         searchBar.rx.text.throttle(0.3, scheduler: MainScheduler.instance).distinctUntilChanged(==).flatMapLatest { (query) -> Observable<UserListModel> in
-            UserTrackerModel.shar.search(username: query!)
+            if self.lastSearStr != "" && self.list.count >= self.totalCount && query!.lowercased().contains(self.lastSearStr){
+                var listModel = UserListModel()
+                listModel.cellModels = self.list.filter({ $0.name.lowercased().contains(query!)})
+                listModel.totalCount = listModel.cellModels.count
+                return Observable<UserListModel>.create({ (observer) -> Disposable in
+                    observer.on(.next(listModel))
+                    observer.on(.completed)
+                    self.lastSearStr = query ?? ""
+                    return Disposables.create()
+                })
+            }
+            self.lastSearStr = query ?? ""
+            return UserTrackerModel.shar.search(username: query!)
         }.subscribe { event in
             switch event {
             case .next(let element):
@@ -64,6 +77,7 @@ class SearchListViewController: ASViewController<ASCollectionNode> {
         }.addDisposableTo(disposeBag)
     }
 }
+
 extension SearchListViewController: IGListAdapterDataSource {
     func listAdapter(_: IGListAdapter, sectionControllerFor _: Any) -> IGListSectionController {
         return UserSectionController()
