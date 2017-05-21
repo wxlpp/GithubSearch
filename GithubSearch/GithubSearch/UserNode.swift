@@ -18,10 +18,10 @@ class UserNode: ASCellNode {
         addSubnode(avatarNode)
         addSubnode(languageNode)
     }
-    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+    override func layoutSpecThatFits(_: ASSizeRange) -> ASLayoutSpec {
         avatarNode.style.preferredSize = CGSize(width: 40, height: 40)
-        let nlStack = ASStackLayoutSpec(direction: .vertical, spacing: 0, justifyContent: .center, alignItems: .center, children: [nameNode,languageNode])
-        let anlStack = ASStackLayoutSpec(direction: .horizontal, spacing: 0, justifyContent: .center, alignItems: .center, children: [avatarNode,nlStack])
+        let nlStack = ASStackLayoutSpec(direction: .vertical, spacing: 0, justifyContent: .center, alignItems: .start, children: [nameNode, languageNode])
+        let anlStack = ASStackLayoutSpec(direction: .horizontal, spacing: 0, justifyContent: .center, alignItems: .center, children: [avatarNode, nlStack])
         return ASInsetLayoutSpec(insets: UIEdgeInsets.zero, child: anlStack)
     }
 }

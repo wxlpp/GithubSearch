@@ -12,14 +12,16 @@ import RxSwift
 
 final class UserSectionController: IGListSectionController, IGListSectionType, ASSectionController {
     var object: UserCellModel?
+    static var count = 0
     let disposeBag = DisposeBag()
-    func nodeBlockForItem(at index: Int) -> ASCellNodeBlock {
+    func nodeBlockForItem(at _: Int) -> ASCellNodeBlock {
+        
         return {
             let node = UserNode()
             guard let user = self.object else { return node }
             node.nameNode.attributedText = NSAttributedString(string: user.name)
             node.avatarNode.url = URL(string: user.avatarPath)
-            UserTrackerModel.shar.getLanguage(for: user.name).subscribe(onNext: { (language) in
+            UserTrackerModel.shar.getLanguage(for: user.name).subscribe(onNext: { language in
                 node.languageNode.attributedText = NSAttributedString(string: language)
             }).addDisposableTo(self.disposeBag)
             return node
@@ -34,9 +36,9 @@ final class UserSectionController: IGListSectionController, IGListSectionType, A
         self.object = object as? UserCellModel
     }
     
-    func didSelectItem(at index: Int) {}
+    func didSelectItem(at _: Int) {}
     
-    //ASDK Replacement
+    // ASDK Replacement
     func sizeForItem(at index: Int) -> CGSize {
         return ASIGListSectionControllerMethods.sizeForItem(at: index)
     }

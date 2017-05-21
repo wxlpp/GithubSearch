@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - ESPullToRefresh (2.6)
   - IGListKit (2.1.0):
     - IGListKit/Default (= 2.1.0)
   - IGListKit/Default (2.1.0):
@@ -35,6 +36,8 @@ PODS:
     - PINCache (= 3.0.1-beta.4)
     - PINRemoteImage/Core
   - Result (3.2.1)
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
   - RxSwift (3.4.1)
   - SwiftyJSON (3.1.4)
   - Texture/Core (2.3.1)
@@ -47,13 +50,16 @@ PODS:
     - Texture/Core
 
 DEPENDENCIES:
+  - ESPullToRefresh
   - Moya-SwiftyJSONMapper/RxSwift
   - Moya/RxSwift
+  - RxCocoa
   - Texture/IGListKit
   - Texture/PINRemoteImage
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  ESPullToRefresh: 85f4990acf87f78c6a1466bbbee7a75d7de24db9
   IGListKit: b826c68ef7a4ae1626c09d4d3e1ea7a169e6c36e
   Moya: d3721622e3cc0cc2f038d69a258686f0b66e7252
   Moya-SwiftyJSONMapper: 03c9d3e562c9025c8c00fa3ec97ae1da61a2be37
@@ -61,10 +67,11 @@ SPEC CHECKSUMS:
   PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
   PINRemoteImage: e4e02e15a6f96cedbcef2abf1c9c1228dc9897d7
   Result: 2453a22e5c5b11c0c3a478736e82cd02f763b781
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
   RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Texture: 839c52ecab07007fade582a01f77224b076ad960
 
-PODFILE CHECKSUM: 70b8904b100cbaedcfc0c641d4ad58053b16186b
+PODFILE CHECKSUM: 4a1f84b7ccd7c7a5a5f2b898c723d0d69fb4cab3
 
 COCOAPODS: 1.2.0

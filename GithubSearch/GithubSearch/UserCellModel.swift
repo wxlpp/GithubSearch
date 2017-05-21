@@ -8,17 +8,17 @@
 
 import IGListKit
 
-class UserCellModel :IGListDiffable {
-    var loginId:NSNumber = 0
+class UserCellModel: IGListDiffable {
+    var loginId: NSNumber = 0
     var name = ""
     var languageStr = ""
     var avatarPath = ""
-    
+
     public func diffIdentifier() -> NSObjectProtocol {
         return loginId
     }
     public func isEqual(toDiffableObject object: IGListDiffable?) -> Bool {
         return loginId.isEqual(object?.diffIdentifier())
     }
-    
+
 }

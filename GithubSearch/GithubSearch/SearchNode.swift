@@ -10,14 +10,14 @@ import AsyncDisplayKit
 
 class SearchNode: ASCellNode {
     var searchBarNode: SearchBarNode
-    
+
     init(delegate: UISearchBarDelegate?) {
-        self.searchBarNode = SearchBarNode(delegate: delegate)
+        searchBarNode = SearchBarNode(delegate: delegate)
         super.init()
         automaticallyManagesSubnodes = true
     }
-    
-    override func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
+
+    override func layoutSpecThatFits(_: ASSizeRange) -> ASLayoutSpec {
         return ASInsetLayoutSpec(insets: .zero, child: searchBarNode)
     }
 }

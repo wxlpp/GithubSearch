@@ -11,4 +11,6 @@ target 'GithubSearch' do
   pod 'Texture', :subspecs => ['PINRemoteImage', 'IGListKit']
   pod 'Moya/RxSwift'
   pod 'Moya-SwiftyJSONMapper/RxSwift'
+  pod 'RxCocoa'
+  pod 'ESPullToRefresh'
 end

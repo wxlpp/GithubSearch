@@ -9,10 +9,16 @@
 import Foundation
 import Moya
 
-let github = RxMoyaProvider<GitHub>()
-let token = "ff35168fee6f8afa37fd5e0ba95f5ee4bfc5c9ae"
+let accessToken = "adfed01023c776c86f9d49978fa0e872d3119d33"
+let endpointClosure = { (target: GitHub) -> Endpoint<GitHub> in
+    let defaultEndpoint = RxMoyaProvider.defaultEndpointMapping(for: target)
+    return defaultEndpoint.adding(newHTTPHeaderFields: ["Authorization": "token \(accessToken)"])
+}
+
+let github = RxMoyaProvider<GitHub>(endpointClosure: endpointClosure)
+
 enum GitHub {
-    case search(username: String)
+    case search(username: String, page: Int)
     case repos(username: String)
 }
 private extension String {
@@ -26,8 +32,8 @@ extension GitHub: TargetType {
         switch self {
         case .search:
             return "/search/users"
-        case .repos(let name):
-            return "users/\(name)/repos"            
+        case let .repos(name):
+            return "users/\(name)/repos"
         }
     }
     var method: Moya.Method {
@@ -35,18 +41,18 @@ extension GitHub: TargetType {
     }
     var parameters: [String: Any]? {
         switch self {
-        case .search(let name):
-            return ["q": name.urlEscaped,"access_token": token]
-        case .repos: return ["access_token": token]
+        case let .search(name, page):
+            return ["q": name.urlEscaped, "page": page]
+        case .repos: return nil
         }
     }
-        var task: Task {
-            return .request
-        }
-        var parameterEncoding: ParameterEncoding {
-            return URLEncoding.default
-        }
-        public var sampleData: Data {
-            return "{\"total_count\":1,\"incomplete_results\":false,\"items\":[{\"login\":\"wxlpp\",\"id\":6649664,\"avatar_url\":\"https://avatars0.githubusercontent.com/u/6649664?v=3\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/wxlpp\",\"html_url\":\"https://github.com/wxlpp\",\"followers_url\":\"https://api.github.com/users/wxlpp/followers\",\"following_url\":\"https://api.github.com/users/wxlpp/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/wxlpp/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/wxlpp/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/wxlpp/subscriptions\",\"organizations_url\":\"https://api.github.com/users/wxlpp/orgs\",\"repos_url\":\"https://api.github.com/users/wxlpp/repos\",\"events_url\":\"https://api.github.com/users/wxlpp/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/wxlpp/received_events\",\"type\":\"User\",\"site_admin\":false,\"score\":36.645664}]}".data(using: String.Encoding.utf8)!
-        }
+    var task: Task {
+        return .request
     }
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    public var sampleData: Data {
+        return "{\"total_count\":1,\"incomplete_results\":false,\"items\":[{\"login\":\"wxlpp\",\"id\":6649664,\"avatar_url\":\"https://avatars0.githubusercontent.com/u/6649664?v=3\",\"gravatar_id\":\"\",\"url\":\"https://api.github.com/users/wxlpp\",\"html_url\":\"https://github.com/wxlpp\",\"followers_url\":\"https://api.github.com/users/wxlpp/followers\",\"following_url\":\"https://api.github.com/users/wxlpp/following{/other_user}\",\"gists_url\":\"https://api.github.com/users/wxlpp/gists{/gist_id}\",\"starred_url\":\"https://api.github.com/users/wxlpp/starred{/owner}{/repo}\",\"subscriptions_url\":\"https://api.github.com/users/wxlpp/subscriptions\",\"organizations_url\":\"https://api.github.com/users/wxlpp/orgs\",\"repos_url\":\"https://api.github.com/users/wxlpp/repos\",\"events_url\":\"https://api.github.com/users/wxlpp/events{/privacy}\",\"received_events_url\":\"https://api.github.com/users/wxlpp/received_events\",\"type\":\"User\",\"site_admin\":false,\"score\":36.645664}]}".data(using: String.Encoding.utf8)!
+    }
+}
