@@ -1,5 +1,5 @@
 # GithubSearch Github搜索API测试题
-![展示](http://github.com/wxlpp/GithubSearch/raw/master/github_search.gif)
+![展示](https://github.com/wxlpp/GithubSearch/blob/master/github_search.gif)
 ## Github 用户搜索  
 *Github 提供了获取用户数据的RESTful API：*
 > 查询用户：https://api.github.com/search/users?q={用户名}  
