@@ -8,15 +8,20 @@
 
 import AsyncDisplayKit
 import IGListKit
+import RxSwift
 
 final class UserSectionController: IGListSectionController, IGListSectionType, ASSectionController {
     var object: UserCellModel?
-    
+    let disposeBag = DisposeBag()
     func nodeBlockForItem(at index: Int) -> ASCellNodeBlock {
         return {
             let node = UserNode()
-            node.nameNode.attributedText = NSAttributedString(string: self.object?.name ?? "")
-            node.avatarNode.url = URL(string: (self.object?.avatarPath)!)
+            guard let user = self.object else { return node }
+            node.nameNode.attributedText = NSAttributedString(string: user.name)
+            node.avatarNode.url = URL(string: user.avatarPath)
+            UserTrackerModel.shar.getLanguage(for: user.name).subscribe(onNext: { (language) in
+                node.languageNode.attributedText = NSAttributedString(string: language)
+            }).addDisposableTo(self.disposeBag)
             return node
         }
     }

@@ -16,7 +16,6 @@ class SearchListViewController: ASViewController<ASCollectionNode> {
     }()
     let searchToken = NSNumber(integerLiteral: 0)
     let searchSection = SearchSectionController()
-    let userTrackerModel = UserTrackerModel(provider: github)
     var list = [IGListDiffable]()
     let disposeBag = DisposeBag()
     var lastRequest: Disposable?
@@ -53,16 +52,13 @@ extension SearchListViewController: IGListAdapterDataSource {
 extension SearchListViewController: SearchSectionControllerDelegate {
     
     func searchSectionController(_: SearchSectionController, didChangeText text: String) {
-        if let disposable = lastRequest {
-            disposable.addDisposableTo(disposeBag)
-        }
-        lastRequest = userTrackerModel.search(username: text).subscribe { event in
+        UserTrackerModel.shar.search(username: text).subscribe { event in
             switch event {
             case .next(let element): self.list = element
                 self.adapter.performUpdates(animated: true, completion: nil)
             default: return
             }
-        }
+        }.addDisposableTo(disposeBag)
     }
 }
     

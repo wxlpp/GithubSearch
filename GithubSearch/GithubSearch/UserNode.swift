@@ -12,7 +12,6 @@ class UserNode: ASCellNode {
     let avatarNode = ASNetworkImageNode()
     let languageNode = ASTextNode()
     override func didLoad() {
-        avatarNode.delegate = self
         avatarNode.placeholderFadeDuration = 0.5
         avatarNode.placeholderColor = ASDisplayNodeDefaultPlaceholderColor()
         addSubnode(nameNode)
@@ -25,7 +24,4 @@ class UserNode: ASCellNode {
         let anlStack = ASStackLayoutSpec(direction: .horizontal, spacing: 0, justifyContent: .center, alignItems: .center, children: [avatarNode,nlStack])
         return ASInsetLayoutSpec(insets: UIEdgeInsets.zero, child: anlStack)
     }
-}
-extension UserNode: ASNetworkImageNodeDelegate {
-    
 }

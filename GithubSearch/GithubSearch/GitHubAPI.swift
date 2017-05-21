@@ -10,9 +10,10 @@ import Foundation
 import Moya
 
 let github = RxMoyaProvider<GitHub>()
-let token = "38217e6f50fb59b3c5dad9eecc128e676e9c29b6"
+let token = "ff35168fee6f8afa37fd5e0ba95f5ee4bfc5c9ae"
 enum GitHub {
     case search(username: String)
+    case repos(username: String)
 }
 private extension String {
     var urlEscaped: String {
@@ -25,6 +26,8 @@ extension GitHub: TargetType {
         switch self {
         case .search:
             return "/search/users"
+        case .repos(let name):
+            return "users/\(name)/repos"            
         }
     }
     var method: Moya.Method {
@@ -34,6 +37,7 @@ extension GitHub: TargetType {
         switch self {
         case .search(let name):
             return ["q": name.urlEscaped,"access_token": token]
+        case .repos: return ["access_token": token]
         }
     }
         var task: Task {

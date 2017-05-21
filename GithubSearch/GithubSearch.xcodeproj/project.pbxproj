@@ -20,6 +20,7 @@
 		AF3A43561ED0B456005F6B6D /* SearchSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43551ED0B456005F6B6D /* SearchSectionController.swift */; };
 		AF3A43581ED0B4BA005F6B6D /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43571ED0B4BA005F6B6D /* SearchNode.swift */; };
 		AF3A435A1ED0B545005F6B6D /* UserSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43591ED0B545005F6B6D /* UserSectionController.swift */; };
+		AF3A435C1ED18ABB005F6B6D /* UserReposResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A435B1ED18ABB005F6B6D /* UserReposResponse.swift */; };
 		CE18FE8433AF661FADA92BD8 /* Pods_GithubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DAAF5240B2A6E6C26EEB27 /* Pods_GithubSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		AF3A43551ED0B456005F6B6D /* SearchSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSectionController.swift; sourceTree = "<group>"; };
 		AF3A43571ED0B4BA005F6B6D /* SearchNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
 		AF3A43591ED0B545005F6B6D /* UserSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSectionController.swift; sourceTree = "<group>"; };
+		AF3A435B1ED18ABB005F6B6D /* UserReposResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserReposResponse.swift; sourceTree = "<group>"; };
 		C6B1228EB138C77B48716DFA /* Pods-GithubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubSearch/Pods-GithubSearch.release.xcconfig"; sourceTree = "<group>"; };
 		EA131507DDBE2D13ECE1D516 /* Pods-GithubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubSearch/Pods-GithubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				AF3A43501ED0A362005F6B6D /* SearchUserResponse.swift */,
+				AF3A435B1ED18ABB005F6B6D /* UserReposResponse.swift */,
 			);
 			name = Response;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				AF3A43511ED0A362005F6B6D /* SearchUserResponse.swift in Sources */,
 				AF3A434E1ED0A25B005F6B6D /* UserTrackerModel.swift in Sources */,
 				AF3A43561ED0B456005F6B6D /* SearchSectionController.swift in Sources */,
+				AF3A435C1ED18ABB005F6B6D /* UserReposResponse.swift in Sources */,
 				AF3A43531ED0B142005F6B6D /* UserCellModel.swift in Sources */,
 				AF3A43471ED0935E005F6B6D /* SearchBarNode.swift in Sources */,
 			);
