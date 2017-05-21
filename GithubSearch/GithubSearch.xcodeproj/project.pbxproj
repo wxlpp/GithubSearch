@@ -10,6 +10,16 @@
 		AF1ABD4E1ED07866001036B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1ABD4D1ED07866001036B8 /* AppDelegate.swift */; };
 		AF1ABD501ED07866001036B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1ABD4F1ED07866001036B8 /* Assets.xcassets */; };
 		AF1ABD531ED07866001036B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1ABD511ED07866001036B8 /* LaunchScreen.storyboard */; };
+		AF3A433F1ED08D16005F6B6D /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A433E1ED08D16005F6B6D /* GitHubAPI.swift */; };
+		AF3A43441ED09061005F6B6D /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43431ED09061005F6B6D /* SearchListViewController.swift */; };
+		AF3A43471ED0935E005F6B6D /* SearchBarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43461ED0935E005F6B6D /* SearchBarNode.swift */; };
+		AF3A434B1ED09F41005F6B6D /* UserNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A434A1ED09F41005F6B6D /* UserNode.swift */; };
+		AF3A434E1ED0A25B005F6B6D /* UserTrackerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A434D1ED0A25B005F6B6D /* UserTrackerModel.swift */; };
+		AF3A43511ED0A362005F6B6D /* SearchUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43501ED0A362005F6B6D /* SearchUserResponse.swift */; };
+		AF3A43531ED0B142005F6B6D /* UserCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43521ED0B142005F6B6D /* UserCellModel.swift */; };
+		AF3A43561ED0B456005F6B6D /* SearchSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43551ED0B456005F6B6D /* SearchSectionController.swift */; };
+		AF3A43581ED0B4BA005F6B6D /* SearchNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43571ED0B4BA005F6B6D /* SearchNode.swift */; };
+		AF3A435A1ED0B545005F6B6D /* UserSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3A43591ED0B545005F6B6D /* UserSectionController.swift */; };
 		CE18FE8433AF661FADA92BD8 /* Pods_GithubSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56DAAF5240B2A6E6C26EEB27 /* Pods_GithubSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,6 +30,16 @@
 		AF1ABD4F1ED07866001036B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF1ABD521ED07866001036B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF1ABD541ED07866001036B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF3A433E1ED08D16005F6B6D /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
+		AF3A43431ED09061005F6B6D /* SearchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
+		AF3A43461ED0935E005F6B6D /* SearchBarNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarNode.swift; sourceTree = "<group>"; };
+		AF3A434A1ED09F41005F6B6D /* UserNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNode.swift; sourceTree = "<group>"; };
+		AF3A434D1ED0A25B005F6B6D /* UserTrackerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTrackerModel.swift; sourceTree = "<group>"; };
+		AF3A43501ED0A362005F6B6D /* SearchUserResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserResponse.swift; sourceTree = "<group>"; };
+		AF3A43521ED0B142005F6B6D /* UserCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCellModel.swift; sourceTree = "<group>"; };
+		AF3A43551ED0B456005F6B6D /* SearchSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSectionController.swift; sourceTree = "<group>"; };
+		AF3A43571ED0B4BA005F6B6D /* SearchNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchNode.swift; sourceTree = "<group>"; };
+		AF3A43591ED0B545005F6B6D /* UserSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSectionController.swift; sourceTree = "<group>"; };
 		C6B1228EB138C77B48716DFA /* Pods-GithubSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-GithubSearch/Pods-GithubSearch.release.xcconfig"; sourceTree = "<group>"; };
 		EA131507DDBE2D13ECE1D516 /* Pods-GithubSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GithubSearch/Pods-GithubSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,12 +85,86 @@
 		AF1ABD4C1ED07866001036B8 /* GithubSearch */ = {
 			isa = PBXGroup;
 			children = (
+				AF3A43401ED09015005F6B6D /* App */,
+				AF3A433B1ED08903005F6B6D /* Netwoek */,
+				AF3A43411ED09025005F6B6D /* UI */,
+			);
+			path = GithubSearch;
+			sourceTree = "<group>";
+		};
+		AF3A433B1ED08903005F6B6D /* Netwoek */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A434F1ED0A340005F6B6D /* Response */,
+				AF3A433E1ED08D16005F6B6D /* GitHubAPI.swift */,
+			);
+			name = Netwoek;
+			sourceTree = "<group>";
+		};
+		AF3A43401ED09015005F6B6D /* App */ = {
+			isa = PBXGroup;
+			children = (
 				AF1ABD4D1ED07866001036B8 /* AppDelegate.swift */,
 				AF1ABD4F1ED07866001036B8 /* Assets.xcassets */,
 				AF1ABD511ED07866001036B8 /* LaunchScreen.storyboard */,
 				AF1ABD541ED07866001036B8 /* Info.plist */,
 			);
-			path = GithubSearch;
+			name = App;
+			sourceTree = "<group>";
+		};
+		AF3A43411ED09025005F6B6D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A43541ED0B43F005F6B6D /* SectionController */,
+				AF3A434C1ED0A248005F6B6D /* ViewModel */,
+				AF3A43451ED09351005F6B6D /* Nodes */,
+				AF3A43421ED0903E005F6B6D /* SearchListViewController */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		AF3A43421ED0903E005F6B6D /* SearchListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A43431ED09061005F6B6D /* SearchListViewController.swift */,
+			);
+			name = SearchListViewController;
+			sourceTree = "<group>";
+		};
+		AF3A43451ED09351005F6B6D /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A43461ED0935E005F6B6D /* SearchBarNode.swift */,
+				AF3A434A1ED09F41005F6B6D /* UserNode.swift */,
+				AF3A43571ED0B4BA005F6B6D /* SearchNode.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		AF3A434C1ED0A248005F6B6D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A434D1ED0A25B005F6B6D /* UserTrackerModel.swift */,
+				AF3A43521ED0B142005F6B6D /* UserCellModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF3A434F1ED0A340005F6B6D /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A43501ED0A362005F6B6D /* SearchUserResponse.swift */,
+			);
+			name = Response;
+			sourceTree = "<group>";
+		};
+		AF3A43541ED0B43F005F6B6D /* SectionController */ = {
+			isa = PBXGroup;
+			children = (
+				AF3A43551ED0B456005F6B6D /* SearchSectionController.swift */,
+				AF3A43591ED0B545005F6B6D /* UserSectionController.swift */,
+			);
+			name = SectionController;
 			sourceTree = "<group>";
 		};
 		DB2E93848D16BEE8B0CF60C0 /* Pods */ = {
@@ -206,6 +300,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF1ABD4E1ED07866001036B8 /* AppDelegate.swift in Sources */,
+				AF3A43581ED0B4BA005F6B6D /* SearchNode.swift in Sources */,
+				AF3A43441ED09061005F6B6D /* SearchListViewController.swift in Sources */,
+				AF3A434B1ED09F41005F6B6D /* UserNode.swift in Sources */,
+				AF3A435A1ED0B545005F6B6D /* UserSectionController.swift in Sources */,
+				AF3A433F1ED08D16005F6B6D /* GitHubAPI.swift in Sources */,
+				AF3A43511ED0A362005F6B6D /* SearchUserResponse.swift in Sources */,
+				AF3A434E1ED0A25B005F6B6D /* UserTrackerModel.swift in Sources */,
+				AF3A43561ED0B456005F6B6D /* SearchSectionController.swift in Sources */,
+				AF3A43531ED0B142005F6B6D /* UserCellModel.swift in Sources */,
+				AF3A43471ED0935E005F6B6D /* SearchBarNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +469,7 @@
 				AF1ABD591ED07866001036B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
